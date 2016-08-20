@@ -6,7 +6,6 @@ viewsModule.config(['$routeProvider', function($routeProvider) {
 }]);
 
 viewsModule.controller('HomeCtrl', ['$scope', 'owmUSCities', 'owmHistory', function($scope, owmUSCities, owmHistory) {
-  owmHistory.push({ name: "Home", isHome : true });
   owmUSCities()
     .then(function(citiesXhr) {
       $scope.cities = citiesXhr;

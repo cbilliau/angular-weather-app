@@ -11,7 +11,7 @@ angular.module('owmLibrary', [])
           return $q.when(response.data);
         });
     };
-  }]) 
+  }])
   .factory('owmUSCities', ['$http', '$q', 'OWM_CITIES_JSON_FILE', function($http, $q, OWM_CITIES_JSON_FILE) {
     return function() {
       return $http.get(OWM_CITIES_JSON_FILE, {cache: true})
